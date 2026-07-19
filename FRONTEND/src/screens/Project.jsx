@@ -60,7 +60,7 @@ const Project = () => {
 
         const fetchProjectsById = async () => {
             try {
-                const res = await axios.get(`/projects/get-project/${location.state.project._id}`)
+                const res = await axios.get(`${import.meta.env.VITE_API_URL}/projects/get-project/${location.state.project._id}`)
            
                 setProject(res.data.project)
             } catch (err) {
@@ -73,7 +73,7 @@ const Project = () => {
 
         const fetchUsers = async () => {
             try {
-                const res = await axios.get('/users/all')
+                const res = await axios.get(`${import.meta.env.VITE_API_URL}/users/all`)
           
                 setUsers(res.data.users)
             } catch (err) {
@@ -90,7 +90,7 @@ const Project = () => {
     function addCollaborators() {
 
         try {
-            const res = axios.put("/projects/add-user", {
+            const res = axios.put(`${import.meta.env.VITE_API_URL}/projects/add-user`, {
                 projectId: location.state.project._id,
                 users: Array.from(selectUserId)
             })

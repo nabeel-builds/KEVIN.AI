@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault()
 
     try {
-      const res = await axios.post('/users/register', { username, email, password })
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/users/register`, { username, email, password })
       localStorage.setItem('token', res.data.token)
       setUser(res.data.user)
       navigate('/')
