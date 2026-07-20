@@ -56,7 +56,7 @@ const KevinLandingPage = () => {
 
                     <div className="relative">
                         <img
-                            src="../../public/KevinModal.png"
+                            src="/KevinModal.png"
                             alt="Kevin AI"
                             className="relative z-10 w-[280px] sm:w-[360px] md:w-[420px] lg:w-[560px] object-contain [mask-image:linear-gradient(to_bottom,white_70%,transparent_100%)]
                             [-webkit-mask-image:linear-gradient(to_bottom,white_60%,transparent_100%)]
